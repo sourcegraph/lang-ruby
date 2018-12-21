@@ -3,6 +3,10 @@
   "title": "Skeleton language extension",
   "description": "Minimal example of a language extension",
   "publisher": "sourcegraph",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sourcegraph/skeleton-language-extension"
+  },
   "activationEvents": [
     "*"
   ],
