@@ -2,6 +2,8 @@
 
 Minimal example of a language extension.
 
+![](sample.png)
+
 ## Prerequisites
 
 Sourcegraph extensions are written in TypeScript and are distributed as bundled JavaScript files that run on the client. For creation, publishing, and viewing, you need:
