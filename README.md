@@ -2,7 +2,7 @@
 
 Minimal example of a language extension.
 
-![](sample.png)
+![](https://user-images.githubusercontent.com/1387653/50319884-86795600-047e-11e9-8535-aaa8b3bc8e54.png)
 
 ## Prerequisites
 
