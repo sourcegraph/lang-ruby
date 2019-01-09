@@ -180,7 +180,7 @@ export function activate(): void {
                     position: { line: position.line, character: position.character },
                 })
 
-                return { contents: { value: `Result: "${result}"` } }
+                return result
             },
         })
     }
