@@ -1,5 +1,6 @@
 # typed: true
 class BigFoo; extend T::Sig
+  # Hey
   class LittleFoo1; extend T::Sig
     sig {params(num: Integer).returns(Integer)}
     def bar(num)
