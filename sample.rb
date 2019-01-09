@@ -7,6 +7,7 @@ class BigFoo; extend T::Sig
     end
   end
 
+  # Hey
   class LittleFoo2; extend T::Sig
     sig {returns(Integer)}
     def bar
