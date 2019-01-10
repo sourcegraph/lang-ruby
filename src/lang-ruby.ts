@@ -162,7 +162,7 @@ export function activate(): void {
         })
         connection.sendNotification(InitializedNotification.type, {})
 
-        sourcegraph.languages.registerHoverProvider(['*'], {
+        sourcegraph.languages.registerHoverProvider([{ pattern: '*.rb' }], {
             provideHover: async (doc, position) => {
                 connection.sendNotification(
                     new NotificationType<DidOpenTextDocumentParams, void>('textDocument/didOpen'),
