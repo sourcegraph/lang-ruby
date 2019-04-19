@@ -33,7 +33,7 @@ interface ModulePatch {
     addFunction: (f: any, signature: string) => FunctionHandle
 }
 
-type SendReceive = (receive: (message: string) => void) => ((message: string) => any)
+type SendReceive = (receive: (message: string) => void) => (message: string) => any
 
 async function connect(wasmURL: string): Promise<SendReceive> {
     const sorbetWasm = await fetch(wasmURL)
@@ -60,10 +60,8 @@ async function connect(wasmURL: string): Promise<SendReceive> {
             receive(wasmModule.Pointer_stringify(response))
         }, 'vi')
 
-        const lspLoop = wasmModule.ccall('lsp_initialize', 'number', ['number'], [moduleOnResponse])
-
         return message => {
-            wasmModule.ccall('lsp_send', null, ['number', 'string'], [lspLoop, message])
+            wasmModule.ccall('lsp', null, ['number', 'string'], [moduleOnResponse, message])
         }
     }
 }
