@@ -44,3 +44,11 @@ $ http-server --cors -p 5000 .
 # Serve the extension
 $ yarn run serve
 ```
+
+Open https://sourcegraph.com/github.com/sourcegraph/lang-ruby@master/-/blob/sample.rb?diff=d533cd6aa770e09274fa9f427d81d2f57c2a6858
+
+Sideload the extension.
+
+You should see hover tooltips:
+
+![image](https://user-images.githubusercontent.com/1387653/56444171-7cd8f100-62ac-11e9-9639-fccb96d0e787.png)
