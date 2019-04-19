@@ -32,3 +32,15 @@ src extensions publish
 ## Sourecgraph extension API
 
 Visit the [Sourcegraph extension documentation](https://github.com/sourcegraph/sourcegraph-extension-docs) and check out some [Sourcegraph extension samples](https://github.com/sourcegraph/sourcegraph-extension-samples).
+
+## Building and running
+
+```bash
+# Build the .wasm and .js files
+$ bazel build //emscripten:sorbet-wasm.tar --config=webasm-darwin && \
+  tar -xvf ./bazel-bin/emscripten/sorbet-wasm.tar sorbet-wasm.wasm sorbet-wasm.js
+# Serve the .wasm and .js files
+$ http-server --cors -p 5000 .
+# Serve the extension
+$ yarn run serve
+```
