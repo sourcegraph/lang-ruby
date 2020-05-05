@@ -27,6 +27,11 @@ class BigFoo; extend T::Sig
     arg + self.class.bar(1, "2").to_s
   end
 
+  sig {params(arg: String).returns(String)}
+  def baz2(arg)
+    arg + self.class.bar(1, "2").to_s
+  end
+
   sig {params(num: Integer).returns(String)}
   def quux(num)
     if num < 10
